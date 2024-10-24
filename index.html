@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./estilo.css">
     <link rel="icon" href="./Imagenes/Favicon.png" type="image/png">
     <style>
@@ -10,73 +12,88 @@
         </style>
     <title>Pet it</title>
 </head>
-<body>
-    <a href="#">
-        <img src="./Imagenes/LogoNaranja.png" alt="pet it, logo, mascotas, adopcion" class="logo">
-    </a>
-    <img src="./Imagenes/MockUp.png" alt="" class="mockUp">
-    <div class="landing-page">
-        <div class="content">
-            <h1>Una App creada especialmente <div class="titulo"> para ellos</div></h1>
-            <div class="linkStores">
-                <img src="./Imagenes/AppStore.png" alt="">
-                <img src="./Imagenes/PlayStore.png" alt="">
-            </div>
 
+<body>
+
+    <section class="section1">
+        <a href="#"><img src="./Imagenes/LogoNaranja.png" alt="" class="logo"></a>
+        <video src="./Imagenes/Videoperrito.mp4" autoplay loop muted class="videoperrito"></video>
+        <h1 class="textoprincipal">Una app creada especialmente para ellos</h1>
+        <div class="stores"><a href="https://apps.apple.com/app/id6444870086" target="_blank"><img src="./Imagenes/AppStore.png" alt=""></a><a href="https://play.google.com/store/apps/details?id=pet.it&pli=1" target="_blank"><img src="./Imagenes/PlayStore.png" alt="" ></a></div>
+        <div class="screens">
+            <img src="./Imagenes/mockups.png" alt="">
         </div>
-    </div>
-        <div class="SegundoFondo">
-            <div class="card">
-                <div id="perdidos">
-                    <img src="./Imagenes/IconoPerdidos.png" alt="" >
-                    <h3>Perdidos</h3>
-                    <p>Encuentra a tu mascota perdida usando pet it, descubre todas las mascotas que se perdieron por tu zona. Totalmente gratis!</p>
-                </div>
-                <div id="adopciones">
-                    <img src="./Imagenes/IconoAdopciones.png" alt="" >
-                    <h3>Adopciones</h3>
-                    <p>Encuentra una nueva mascota para adoptar y darle un hogar lleno de amor. Conecta con refugios y familias cercanas. Publica a tu mascota y da en adopcion</p>
-                </div>
-                <div id="profesionales">
-                    <img src="./Imagenes/IconoProfesionales.png" alt="" >
-                    <h3>Profesionales</h3>
-                    <p>Descubre veterinarios, entrenadores, cuidadores y mucho más. Encuentra servicios profesionales en tu área de forma fácil.</p>
-            </div>
+    </section>
+
+    <section class="section2">
+        <div class="categorias">
+            <img src="./Imagenes/adopciones.jpg" alt="" class="animate__animated ">
+            <h3>Adopciones</h3>
+            <p class="hover-text">¡Adoptá, no compres! Busca a tu nuevo mejor amigo en pet it. Si ténes una mascota en adopción, ¡compartila y ayudala a encontrar un hogar!</p>
         </div>
-    </div>
-        <div class="CallToAction">
-            <p>Perdi a mi mascota</p>
-            <p>Quiero adoptar</p>
+        <div class="categorias">
+            <img src="./Imagenes/perdidos.jpg" alt="" class="animate__animated " >
+            <h3>Perdidos</h3>
+            <p class="hover-text">¡Ayudá a encontrar a tu peludo! Si tu mascota se perdió, súbela a pet it y deja que otros te ayuden. También podes ver mascotas perdidas cerca de ti.</p>
         </div>
+        <div class="categorias">
+            <img src="./Imagenes/profesionales.jpg" alt="" class="animate__animated ">
+            <h3>Profesionales</h3>
+            <p class="hover-text">Encontrá expertos en tu zona:  Desde paseadores de perros y cuidadores hasta veterinarios y adiestradores. Conecta con profesionales de confianza y brindale a tu mascota el cuidado que se merece.</p>
+        </div>
+        <div class="categorias">
+            <img src="./Imagenes/comunidad.jpg" alt="" class="animate__animated ">
+            <h3>Comunidad</h3>
+            <p class="hover-text">Conectate con otros amantes de los animales. Comparte consejos, historias y todo sobre tus mascotas. ¡Aquí estamos para ayudarnos entre todos!</p>
+        </div>
+    </section>
+
+    <section class="section3">
+        <img src="./Imagenes/MockUp.png" alt="" class="celu">
+        <h2>Pet it es una app completamente gratis</h2>
+        <p>Que esperas para descargarla?</p>
+        <div class="stores2"><a href="https://apps.apple.com/app/id6444870086" target="_blank"><img src="./Imagenes/AppStore.png" alt=""></a><a href="https://play.google.com/store/apps/details?id=pet.it&pli=1" target="_blank"><img src="./Imagenes/PlayStore.png" alt=""></a></div>
+    </section>
+    <section class="datos">
+        <div ><h3 class="counter" data-target="+200">0</h3><p>Mascotas volvieron a su casa</p></div>
+        <div ><h3 class="counter" data-target="+500">0</h3><p>Peluditos encontraron hogar</p></div>
+        <div ><h3 class="counter" data-target="+20000">++0</h3><p>Descargas de pet it</p></div>
+    </section>
 
 
         <footer>
             <div class="footer-container">
+                <img src="./Imagenes/LogoNaranja.png" alt="">
                 <div class="footer-about">
                 <h3>Sobre Nosotros</h3>
-                <p>Somos una empresa dedicada a brindar soluciones tecnológicas de vanguardia para mejorar la vida de nuestros clientes.</p>
+                <p>Somos una familia</p>
                 </div>
             
             <div class="footer-links">
                 <h3>Enlaces</h3>
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="./TerminosyCondiciones.html">Terminos y condiciones</a></li>
-                    <li><a href="./EliminarCuenta.html">Como eliminar cuenta</a></li>
+                    <li><a href="./TerminosyCondiciones.html" target="_blank">Terminos y condiciones</a></li>
+                    <li><a href="./EliminarCuenta.html" target="_blank">Como eliminar cuenta</a></li>
                 </ul>
             </div>
         
             <div class="footer-social">
                 <h3>Síguenos</h3>
                 <ul>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="https://www.instagram.com/petit.arg" target="_blank">Instagram</a></li>
                 </ul>
             </div>
             </div>
         
             <div class="footer-bottom">
-            <p>&copy; 2024 MiEmpresa. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Petit. Todos los derechos reservados.</p>
             </div>
         </footer>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+        <script src="main.js"></script>
 </body>
 </html>
