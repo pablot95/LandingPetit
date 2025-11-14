@@ -3,97 +3,478 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pet it - La app para encontrar, adoptar y cuidar a tus mascotas. Conecta con otros amantes de los animales.">
+    <meta name="keywords" content="mascotas, adopción, perdidos, veterinarios, pet it">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./estilo.css">
     <link rel="icon" href="./Imagenes/Favicon.png" type="image/png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        </style>
-    <title>Pet it</title>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+    </style>
+    <title>Pet it - Una app creada especialmente para ellos 🐾</title>
 </head>
 
 <body>
+    <!-- Loader animado -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <img src="./Imagenes/cuidado-de-mascotas.png" alt="Loading" class="loader-icon">
+            <div class="loader-text">Cargando Pet it...</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
 
-    <section class="section1">
-        <a href="#"><img src="./Imagenes/LogoNaranja.png" alt="" class="logo"></a>
-        <video src="./Imagenes/Videoperrito.mp4" autoplay loop muted class="videoperrito"></video>
-        <h1 class="textoprincipal">Una app creada especialmente para ellos</h1>
-        <div class="stores"><a href="https://apps.apple.com/app/id6444870086" target="_blank"><img src="./Imagenes/AppStore.png" alt=""></a><a href="https://play.google.com/store/apps/details?id=pet.it&pli=1" target="_blank"><img src="./Imagenes/PlayStore.png" alt="" ></a></div>
-        <div class="screens">
-            <img src="./Imagenes/mockups.png" alt="">
+    <!-- Header flotante -->
+    <header class="floating-header">
+        <nav class="main-nav">
+            <a href="#" class="nav-logo">
+                <img src="./Imagenes/LogoNaranja.png" alt="Pet it Logo" class="logo-nav">
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#categorias" class="nav-link">Categorías</a></li>
+                <li><a href="#descargar" class="nav-link">Descargar</a></li>
+                <li><a href="#estadisticas" class="nav-link">Estadísticas</a></li>
+                <li><a href="#footer" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section mejorada -->
+    <section class="section1" id="inicio">
+        <div class="hero-bg-overlay"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
+        <a href="#" class="hero-logo-link"><img src="./Imagenes/LogoNaranja.png" alt="Pet it Logo" class="logo"></a>
+        <video src="./Imagenes/Videoperrito.mp4" autoplay loop muted playsinline class="videoperrito"></video>
+        
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <h1 class="textoprincipal animate-text">
+                    <span class="text-line">Una app creada</span>
+                    <span class="text-line">especialmente</span>
+                    <span class="text-line highlight">para ellos</span>
+                </h1>
+                <p class="hero-subtitle">Encuentra, adopta y cuida a tu mejor amigo 🐾</p>
+                
+                <div class="stores">
+                    <a href="https://apps.apple.com/app/id6444870086" target="_blank" class="store-btn app-store">
+                        <img src="./Imagenes/AppStore.png" alt="Descargar en App Store">
+                        <span class="btn-glow"></span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=pet.it&pli=1" target="_blank" class="store-btn play-store">
+                        <img src="./Imagenes/PlayStore.png" alt="Descargar en Google Play">
+                        <span class="btn-glow"></span>
+                    </a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="feature-tag">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        100% Gratis
+                    </div>
+                    <div class="feature-tag">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        Segura
+                    </div>
+                    <div class="feature-tag">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Comunidad
+                    </div>
+                </div>
+            </div>
+            
+            <div class="screens">
+                <div class="screens-container">
+                    <img src="./Imagenes/mockups.png" alt="Pet it App Screenshots" class="screens-img">
+                    <div class="screens-glow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator-hero">
+            <span class="scroll-text">Descubre más</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
         </div>
     </section>
 
-    <section class="section2">
-        <div class="categorias">
-            <img src="./Imagenes/adopciones.jpg" alt="" class="animate__animated ">
-            <h3>Adopciones</h3>
-            <p class="hover-text">¡Adoptá, no compres! Busca a tu nuevo mejor amigo en pet it. Si ténes una mascota en adopción, ¡compartila y ayudala a encontrar un hogar!</p>
+    <!-- Sección de Categorías mejorada -->
+    <section class="section2" id="categorias">
+        <div class="section-intro">
+            <span class="section-badge">Funcionalidades</span>
+            <h2 class="section-title">Todo lo que necesitas en una sola app</h2>
+            <p class="section-description">Descubre las increíbles funcionalidades que Pet it tiene para ti y tus mascotas</p>
         </div>
-        <div class="categorias">
-            <img src="./Imagenes/perdidos.jpg" alt="" class="animate__animated " >
-            <h3>Perdidos</h3>
-            <p class="hover-text">¡Ayudá a encontrar a tu peludo! Si tu mascota se perdió, súbela a pet it y deja que otros te ayuden. También podes ver mascotas perdidas cerca de ti.</p>
-        </div>
-        <div class="categorias">
-            <img src="./Imagenes/profesionales.jpg" alt="" class="animate__animated ">
-            <h3>Profesionales</h3>
-            <p class="hover-text">Encontrá expertos en tu zona:  Desde paseadores de perros y cuidadores hasta veterinarios y adiestradores. Conecta con profesionales de confianza y brindale a tu mascota el cuidado que se merece.</p>
-        </div>
-        <div class="categorias">
-            <img src="./Imagenes/comunidad.jpg" alt="" class="animate__animated ">
-            <h3>Comunidad</h3>
-            <p class="hover-text">Conectate con otros amantes de los animales. Comparte consejos, historias y todo sobre tus mascotas. ¡Aquí estamos para ayudarnos entre todos!</p>
+
+        <div class="categorias-grid">
+            <div class="categorias" data-category="adopciones">
+                <div class="categoria-image-wrapper">
+                    <img src="./Imagenes/adopciones.jpg" alt="Adopciones Pet it" class="animate__animated">
+                    <div class="categoria-overlay"></div>
+                    <div class="categoria-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="categoria-content">
+                    <h3>Adopciones</h3>
+                    <p class="categoria-excerpt">Dale un hogar a quien más lo necesita</p>
+                    <div class="hover-text">
+                        <p>¡Adoptá, no compres! Busca a tu nuevo mejor amigo en pet it. Si tenés una mascota en adopción, ¡compartila y ayudala a encontrar un hogar!</p>
+                        <ul class="categoria-features">
+                            <li>✓ Filtros por ubicación</li>
+                            <li>✓ Perfiles detallados</li>
+                            <li>✓ Chat directo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categorias" data-category="perdidos">
+                <div class="categoria-image-wrapper">
+                    <img src="./Imagenes/perdidos.jpg" alt="Mascotas Perdidas" class="animate__animated">
+                    <div class="categoria-overlay"></div>
+                    <div class="categoria-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="categoria-content">
+                    <h3>Perdidos</h3>
+                    <p class="categoria-excerpt">Ayuda a reunir familias</p>
+                    <div class="hover-text">
+                        <p>¡Ayudá a encontrar a tu peludo! Si tu mascota se perdió, súbela a pet it y deja que otros te ayuden. También podés ver mascotas perdidas cerca de ti.</p>
+                        <ul class="categoria-features">
+                            <li>✓ Alertas en tiempo real</li>
+                            <li>✓ Geolocalización</li>
+                            <li>✓ Red de ayuda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categorias" data-category="profesionales">
+                <div class="categoria-image-wrapper">
+                    <img src="./Imagenes/profesionales.jpg" alt="Profesionales Pet it" class="animate__animated">
+                    <div class="categoria-overlay"></div>
+                    <div class="categoria-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="categoria-content">
+                    <h3>Profesionales</h3>
+                    <p class="categoria-excerpt">Expertos para tu mascota</p>
+                    <div class="hover-text">
+                        <p>Encontrá expertos en tu zona: Desde paseadores de perros y cuidadores hasta veterinarios y adiestradores. Conecta con profesionales de confianza y bríndale a tu mascota el cuidado que se merece.</p>
+                        <ul class="categoria-features">
+                            <li>✓ Perfiles verificados</li>
+                            <li>✓ Reseñas reales</li>
+                            <li>✓ Reserva online</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categorias" data-category="comunidad">
+                <div class="categoria-image-wrapper">
+                    <img src="./Imagenes/comunidad.jpg" alt="Comunidad Pet it" class="animate__animated">
+                    <div class="categoria-overlay"></div>
+                    <div class="categoria-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="categoria-content">
+                    <h3>Comunidad</h3>
+                    <p class="categoria-excerpt">Conecta con otros pet lovers</p>
+                    <div class="hover-text">
+                        <p>Conectate con otros amantes de los animales. Comparte consejos, historias y todo sobre tus mascotas. ¡Aquí estamos para ayudarnos entre todos!</p>
+                        <ul class="categoria-features">
+                            <li>✓ Foro de mascotas</li>
+                            <li>✓ Eventos locales</li>
+                            <li>✓ Tips y consejos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section3">
-        <img src="./Imagenes/MockUp.png" alt="" class="celu">
-        <h2>Pet it es una app completamente gratis</h2>
-        <p>Que esperas para descargarla?</p>
-        <div class="stores2"><a href="https://apps.apple.com/app/id6444870086" target="_blank"><img src="./Imagenes/AppStore.png" alt=""></a><a href="https://play.google.com/store/apps/details?id=pet.it&pli=1" target="_blank"><img src="./Imagenes/PlayStore.png" alt=""></a></div>
+    <!-- Call to Action Section -->
+    <section class="section3" id="descargar">
+        <div class="section3-bg">
+            <div class="bg-pattern"></div>
+        </div>
+        <div class="section3-container">
+            <div class="cta-phone-wrapper">
+                <img src="./Imagenes/MockUp.png" alt="Pet it App Mockup" class="celu">
+                <div class="phone-glow"></div>
+                <div class="floating-paws">
+                    <span class="paw">🐾</span>
+                    <span class="paw">🐾</span>
+                    <span class="paw">🐾</span>
+                    <span class="paw">🐾</span>
+                    <span class="paw">🐾</span>
+                </div>
+            </div>
+            
+            <div class="cta-content">
+                <span class="cta-badge">Descarga gratis</span>
+                <h2 class="cta-title">
+                    <span class="gradient-text">Pet it</span> es una app 
+                    <span class="highlight-box">completamente gratis</span>
+                </h2>
+                <p class="cta-description">
+                    ¿Qué esperas para descargarla? Únete a miles de personas que ya están conectadas 
+                    con sus mascotas de una forma única.
+                </p>
+                
+                <div class="cta-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <span>Sin pagos ocultos</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <span>Actualizaciones constantes</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <span>Soporte 24/7</span>
+                    </div>
+                </div>
+
+                <div class="stores2">
+                    <a href="https://apps.apple.com/app/id6444870086" target="_blank" class="cta-store-btn">
+                        <img src="./Imagenes/AppStore.png" alt="Descargar en App Store">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=pet.it&pli=1" target="_blank" class="cta-store-btn">
+                        <img src="./Imagenes/PlayStore.png" alt="Descargar en Google Play">
+                    </a>
+                </div>
+
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <span class="trust-number">4.8</span>
+                        <div class="trust-stars">★★★★★</div>
+                        <span class="trust-label">Calificación</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">20K+</span>
+                        <span class="trust-label">Descargas</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">500+</span>
+                        <span class="trust-label">Adopciones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="datos">
-        <div ><h3 class="counter" data-target="+200">0</h3><p>Mascotas volvieron a su casa</p></div>
-        <div ><h3 class="counter" data-target="+500">0</h3><p>Peluditos encontraron hogar</p></div>
-        <div ><h3 class="counter" data-target="+20000">++0</h3><p>Descargas de pet it</p></div>
+    <!-- Sección de Estadísticas mejorada -->
+    <section class="datos" id="estadisticas">
+        <div class="datos-bg">
+            <div class="stats-pattern"></div>
+        </div>
+        <div class="datos-container">
+            <div class="datos-header">
+                <h2 class="datos-title">Nuestro impacto en números</h2>
+                <p class="datos-subtitle">Ayudamos a miles de mascotas y personas todos los días</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="counter" data-target="200">0</h3>
+                    <p class="stat-label">Mascotas volvieron a su casa</p>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="--progress: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p class="stat-label">Peluditos encontraron hogar</p>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="--progress: 92%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="counter" data-target="20000">0</h3>
+                    <p class="stat-label">Descargas de pet it</p>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="--progress: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="datos-cta">
+                <p class="datos-cta-text">¿Quieres ser parte de estas estadísticas?</p>
+                <a href="#descargar" class="datos-cta-btn">
+                    <span>Descarga la app ahora</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </section>
 
 
-        <footer>
+    <!-- Footer mejorado -->
+    <footer id="footer">
+        <div class="footer-top">
             <div class="footer-container">
-                <img src="./Imagenes/LogoNaranja.png" alt="">
-                <div class="footer-about">
-                <h3>Sobre Nosotros</h3>
-                <p>Somos una familia</p>
+                <div class="footer-brand">
+                    <img src="./Imagenes/LogoNaranja.png" alt="Pet it Logo" class="footer-logo">
+                    <p class="footer-tagline">Una app creada especialmente para ellos 🐾</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.instagram.com/petit.arg" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/petit.arg" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#descargar">Descargar</a></li>
+                        <li><a href="#estadisticas">Estadísticas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="./TerminosyCondiciones.html" target="_blank">Términos y Condiciones</a></li>
+                        <li><a href="./EliminarCuenta.html" target="_blank">Cómo Eliminar Cuenta</a></li>
+                        <li><a href="./TerminosyCondiciones.html#datos" target="_blank">Política de Privacidad</a></li>
+                    </ul>
                 </div>
             
-            <div class="footer-links">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="./TerminosyCondiciones.html" target="_blank">Terminos y condiciones</a></li>
-                    <li><a href="./EliminarCuenta.html" target="_blank">Como eliminar cuenta</a></li>
-                </ul>
+                <div class="footer-download">
+                    <h3>Descarga la App</h3>
+                    <p>Disponible en todas las plataformas</p>
+                    <div class="footer-stores">
+                        <a href="https://apps.apple.com/app/id6444870086" target="_blank" rel="noopener noreferrer">
+                            <img src="./Imagenes/AppStore.png" alt="Descargar en App Store">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=pet.it&pli=1" target="_blank" rel="noopener noreferrer">
+                            <img src="./Imagenes/PlayStore.png" alt="Descargar en Google Play">
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
         
-            <div class="footer-social">
-                <h3>Síguenos</h3>
-                <ul>
-                <li><a href="https://www.instagram.com/petit.arg" target="_blank">Instagram</a></li>
-                </ul>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2024 Pet it®. Todos los derechos reservados.</p>
+                <p class="footer-love">Hecho con <span class="heart">❤️</span> para nuestros amigos peludos</p>
             </div>
-            </div>
-        
-            <div class="footer-bottom">
-            <p>&copy; 2024 Petit. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        </div>
+
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
 
 
         <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script src="main.js"></script>
 </body>
 </html>
