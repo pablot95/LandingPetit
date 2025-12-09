@@ -422,6 +422,71 @@ if (window.innerWidth < 768) {
 }
 
 // ===================================
+// Protección contra inspección y copia
+// ===================================
+
+// Deshabilitar click derecho
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    return false;
+});
+
+// Deshabilitar selección de texto
+document.addEventListener('selectstart', (e) => {
+    e.preventDefault();
+    return false;
+});
+
+
+// Deshabilitar atajos de teclado para inspeccionar
+document.addEventListener('keydown', (e) => {
+    // F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Ctrl+Shift+I (Inspeccionar)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Ctrl+Shift+J (Consola)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Ctrl+Shift+C (Selector de elementos)
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Ctrl+U (Ver código fuente)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Ctrl+S (Guardar página)
+    if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Deshabilitar arrastrar imágenes
+document.addEventListener('dragstart', (e) => {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+
+// ===================================
 // CONSOLE LOG DE BIENVENIDA
 // ===================================
 console.log('%c🐾 Pet it - Hecho con ❤️ para nuestros amigos peludos', 
