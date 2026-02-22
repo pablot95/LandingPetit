@@ -95,51 +95,6 @@ animatedElements.forEach(element => {
 });
 
 // ===================================
-// CONTADOR ANIMADO CON FORMATO
-// ===================================
-const counters = document.querySelectorAll('.counter');
-
-const formatNumber = (num) => {
-    if (num >= 1000) {
-        return (num / 1000).toFixed(0) + 'K+';
-    }
-    return num + '+';
-};
-
-const animateCounter = (element) => {
-    const target = parseInt(element.getAttribute('data-target'));
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-
-    const updateCounter = () => {
-        current += increment;
-        
-        if (current < target) {
-            element.textContent = formatNumber(Math.ceil(current));
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = formatNumber(target);
-        }
-    };
-    
-    updateCounter();
-};
-
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            counterObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-counters.forEach(counter => {
-    counterObserver.observe(counter);
-});
-
-// ===================================
 // GSAP ANIMATIONS
 // ===================================
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -186,19 +141,6 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             delay: index * 0.1,
             ease: 'power2.out'
         });
-    });
-
-    // Animación de las tarjetas de estadísticas
-    gsap.from('.stat-card', {
-        scrollTrigger: {
-            trigger: '.stats-grid',
-            start: 'top 80%'
-        },
-        y: 80,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: 'power3.out'
     });
 
     // Parallax en el hero
@@ -421,75 +363,3 @@ if (window.innerWidth < 768) {
     document.body.classList.add('mobile');
 }
 
-// ===================================
-// Protección contra inspección y copia
-// ===================================
-
-// Deshabilitar click derecho
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-    return false;
-});
-
-// Deshabilitar selección de texto
-document.addEventListener('selectstart', (e) => {
-    e.preventDefault();
-    return false;
-});
-
-
-// Deshabilitar atajos de teclado para inspeccionar
-document.addEventListener('keydown', (e) => {
-    // F12
-    if (e.key === 'F12') {
-        e.preventDefault();
-        return false;
-    }
-    
-    // Ctrl+Shift+I (Inspeccionar)
-    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        e.preventDefault();
-        return false;
-    }
-    
-    // Ctrl+Shift+J (Consola)
-    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-        e.preventDefault();
-        return false;
-    }
-    
-    // Ctrl+Shift+C (Selector de elementos)
-    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-        e.preventDefault();
-        return false;
-    }
-    
-    // Ctrl+U (Ver código fuente)
-    if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-        return false;
-    }
-    
-    // Ctrl+S (Guardar página)
-    if (e.ctrlKey && e.key === 's') {
-        e.preventDefault();
-        return false;
-    }
-});
-
-// Deshabilitar arrastrar imágenes
-document.addEventListener('dragstart', (e) => {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-    }
-});
-
-
-// ===================================
-// CONSOLE LOG DE BIENVENIDA
-// ===================================
-console.log('%c🐾 Pet it - Hecho con ❤️ para nuestros amigos peludos', 
-    'font-size: 20px; font-weight: bold; color: #ee9a12;');
-console.log('%cDesarrollado con: HTML5, CSS3, JavaScript, GSAP', 
-    'font-size: 12px; color: #7f8c8d;');
